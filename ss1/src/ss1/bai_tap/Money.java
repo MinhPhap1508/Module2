@@ -9,7 +9,7 @@ public class Money {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Mời bạn nhập số tiền usd: ");
         usd = scanner.nextDouble();
-        double quydoi = usd * 23000;
+        double quydoi = usd * VND;
         System.out.print("Giá trị VND: " + quydoi);
     }
 }
