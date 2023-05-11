@@ -7,7 +7,6 @@ public class Colum {
         Scanner scanner = new Scanner(System.in);
         int size;
         int length;
-        int index;
         System.out.print("Nhập vào số lượng mảng: ");
         size = scanner.nextInt();
         System.out.print("Nhập vào độ dài mảng: ");
@@ -21,14 +20,10 @@ public class Colum {
             }
         }
         System.out.print("Nhập số cột cần tính tổng: ");
-        index = scanner.nextInt();
+        int index = scanner.nextInt();
         int sum = 0;
         for (int i = 0; i < size; i++) {
-            if (index == i) {
-                for (int j = 0; j < arr.length; j++) {
-                    sum = sum + arr[i][j];
-                }
-            }
+            sum += arr[i][index];
         }
         System.out.print("Tổng của cột: " + index + " là: " + sum);
     }
