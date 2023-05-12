@@ -18,14 +18,12 @@ public class StopWatch {
         return endTime;
     }
 
-    public long start() {
+    public void start() {
         startTime = System.currentTimeMillis();
-        return startTime;
     }
 
-    public long stop() {
+    public void  stop() {
         endTime = System.currentTimeMillis();
-        return endTime;
     }
 
 
