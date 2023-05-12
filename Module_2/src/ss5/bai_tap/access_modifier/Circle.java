@@ -9,7 +9,7 @@ public class Circle {
         radius=r;
     }
     // dùng từ khóa this để phân biệt tham số radius và trường radius.
-    //public Circle(double radius){
+    // public Circle(double radius){
     //       this.radius=radius;
     //    }
     public double getRadius(){

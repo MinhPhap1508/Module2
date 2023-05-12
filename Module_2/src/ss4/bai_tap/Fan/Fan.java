@@ -44,12 +44,22 @@ public class Fan {
     public void setOn(boolean on) {
         this.on = on;
     }
+
     public String toString() {
-        return "Fan{" +
-                "speed=" + speed +
-                ", radius=" + radius +
-                ", color='" + color + '\'' +
-                ", on=" + on +
-                '}';
+        if (isOn()) {
+            return "Fan{Fan is on " +
+                    "speed=" + speed +
+                    ", radius=" + radius +
+                    ", color='" + color + '\'' +
+                    ", on=" + on +
+                    '}';
+
+        } else {
+            return "Fan{Fan is off " +
+                    ", radius=" + radius +
+                    ", color='" + color + '\'' +
+                    ", on=" + on +
+                    '}';
+        }
     }
 }

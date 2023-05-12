@@ -12,8 +12,7 @@ public class Main {
         fan2.setRadius(5);
         fan2.setColor("blue");
         fan2.setOn(false);
-        System.out.println("Fan 1: Speed = " + fan1.getSpeed() + ", Radius = " + fan1.getRadius() +", Color = "+fan1.getColor()+ ", On = " + fan1.isOn());
-        System.out.println("Fan 2: Speed = " + fan2.getSpeed() + ", Radius = " + fan2.getRadius() +", Color = "+fan2.getColor()+ ", On = " + fan2.isOn());
-
+        System.out.println(fan1);
+        System.out.println(fan2);
     }
 }
