@@ -1,8 +1,8 @@
 package ss5.bai_tap.access_modifier;
 
 public class Circle {
-    double radius=1.0;
-  static String color="red";
+   private double radius=1.0;
+    private String color="red";
     public Circle (){
     }
     public Circle(double r){
@@ -17,5 +17,13 @@ public class Circle {
     }
     public double getArea(){
         return radius*radius*3.14;
+    }
+
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "radius=" + radius +
+                ", color='" + color + '\'' +
+                '}';
     }
 }
