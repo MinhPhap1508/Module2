@@ -4,7 +4,7 @@ public class TennisGame {
 
     public static String getScore(int scoreOfPlayerFirst, int scoreOfPlayerSecond) {
         StringBuilder score = new StringBuilder();
-        int tempScore = 0;
+        int tempScore;
         final int ZERO_POINT = 0;
         final int ONE_POINT = 1;
         final int TWO_POINT = 2;
