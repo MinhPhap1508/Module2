@@ -42,7 +42,7 @@ public class Circle extends Shape implements Resizeable {
     }
 
     public void resize(double percent) {
-       setRadius(getRadius()/(percent/ 100));
+       setRadius(getRadius()+getRadius()*(percent/ 100));
     }
 
 }
