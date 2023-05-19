@@ -25,38 +25,43 @@ public class MyList<E> {
         if (size == elements.length) {
             ensureCapa();
         }
-        elements[index]=element;
+        elements[index] = element;
         size++;
     }
-public E remove(int index){
-    if(index > 0 && index <elements.length){
-        for (int i = 0; i < size; i++) {
-            elements[i]=elements[i-1];
-        }
-        elements[index] =null;
-        size--;
-    }
-    return (E)elements;
-}
 
-    private int size(){
+    public E remove(int index) {
+        if (index > 0 && index < elements.length) {
+            for (int i = 0; i < size; i++) {
+                elements[i] = elements[i - 1];
+            }
+            elements[index] = null;
+            size--;
+        }
+        return (E) elements;
+    }
+
+    private int size() {
         return size;
     }
-    public E clone(){
-       Object[] newArr= Arrays.copyOf(elements,elements.length);
-       return (E)newArr;
+
+    public E clone() {
+        Object[] newArr = Arrays.copyOf(elements, elements.length);
+        return (E) newArr;
     }
-    public boolean contains(E o){
+
+    public boolean contains(E o) {
         for (int i = 0; i < elements.length; i++) {
-            if(o==elements[i]){
+            if (o == elements[i]) {
                 return true;
             }
-        }return false;
+        }
+        return false;
     }
-    public int indexOf(E o){
+
+    public int indexOf(E o) {
         if (o == null) {
             for (int i = 0; i < size; i++)
-                if (elements[i]==null)
+                if (elements[i] == null)
                     return i;
         } else {
             for (int i = 0; i < size; i++)
@@ -65,26 +70,30 @@ public E remove(int index){
         }
         return -1;
     }
-    public boolean add(E e){
-      ensureCapacity(size+1);
-      elements[size++]=e;
-      return true;
-    }
-    public void ensureCapacity(int minCapacity){
-        int newSize= elements.length+minCapacity;
-        elements= Arrays.copyOf(elements,newSize);
+
+    public boolean add(E e) {
+        if (size == elements.length) {
+            ensureCapacity(size * 2);
+        }
+        elements[size++] = e;
+        return true;
     }
 
-    public void clear(){
+    public void ensureCapacity(int minCapacity) {
+        int newSize = elements.length + minCapacity;
+        elements = Arrays.copyOf(elements, newSize);
+    }
+
+    public void clear() {
         for (int i = 0; i < elements.length; i++) {
-            elements[i]=null;
+            elements[i] = null;
         }
-        size=0;
+        size = 0;
     }
 
     public E get(int i) {
-        if (i>= size || i <0) {
-            throw new IndexOutOfBoundsException("Index: " + i + ", Size " + i );
+        if (i >= size || i < 0) {
+            throw new IndexOutOfBoundsException("Index: " + i + ", Size " + i);
         }
         return (E) elements[i];
     }
