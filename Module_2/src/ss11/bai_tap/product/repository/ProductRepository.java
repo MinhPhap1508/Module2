@@ -39,13 +39,12 @@ public class ProductRepository implements IProductRepository {
     }
 
     @Override
-    public Product getByName(String name) {
+    public void getByName(String name) {
         for (Product p : products) {
-            if (p.getName().equals(name)) {
-                return p;
+            if (p.getName().contains(name)) {
+                System.out.println(p);
             }
         }
-        return null;
     }
 
     @Override

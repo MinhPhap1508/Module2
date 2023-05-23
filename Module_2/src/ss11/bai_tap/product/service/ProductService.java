@@ -98,12 +98,8 @@ public class ProductService implements IService {
     public void findProduct() {
         System.out.println("Nhập tên sản phẩm cần tiềm kiếm");
         String name = scanner.nextLine();
-        Product products = productRepository.getByName(name);
-        if (products == null) {
-            System.out.println("Sản phẩm không có trong cửa hàng");
-        } else {
-            System.out.println(products);
-        }
+        productRepository.getByName(name);
+
     }
 
     @Override
