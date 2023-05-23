@@ -9,7 +9,7 @@ public class BinarySearch {
     static int binarySearch(int[] list, int key) {
         int first = 0;
         int last = list.length - 1;
-        while (first < last) {
+        while (first <= last) {
             int mid = (first + last) / 2;
             if (key < list[mid]) {
                 last = mid -1;
