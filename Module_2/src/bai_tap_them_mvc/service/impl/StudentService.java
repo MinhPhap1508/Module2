@@ -27,7 +27,7 @@ public class StudentService implements ImanageService {
     public void addPerson() {
         System.out.println("Nhập mã sinh viên");
         String code = scanner.nextLine();
-        System.out.println("Nhap tên sinh viên");
+        System.out.println("Nhập tên sinh viên");
         String name = scanner.nextLine();
         System.out.println("Nhập ngày sinh");
         String date = scanner.nextLine();
@@ -40,12 +40,21 @@ public class StudentService implements ImanageService {
         }
         System.out.println("Nhập lớp");
         String classes = scanner.nextLine();
-        System.out.println("Nhập điểm");
-        int scores = Integer.parseInt(scanner.nextLine());
-        Students students = new Students(code, name, date, flag, classes, scores);
-        studentsRepository.addPerson(students);
-        System.out.println("Them mới thành công");
+        int scores = 0;
+        while (true) {
+            try {
+                System.out.println("Nhập điểm");
+                scores = Integer.parseInt(scanner.nextLine());
+                break;
+            } catch (NumberFormatException numberFormatException) {
+                System.out.println("Vui lòng nhập lại");
+            }
+            Students students = new Students(code, name, date, flag, classes, scores);
+            studentsRepository.addPerson(students);
+        }
+        System.out.println("Thêm mới thành công");
     }
+
 
     @Override
     public void removePerson() {
