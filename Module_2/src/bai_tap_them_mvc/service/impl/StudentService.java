@@ -67,10 +67,17 @@ public class StudentService implements ImanageService {
             System.out.println("Bạn có chắc muốn xóa sinh viên này không");
             System.out.println("1. Yes");
             System.out.println("2. No");
-            int choice = Integer.parseInt(scanner.nextLine());
-            if (choice == 1) {
-                studentsRepository.removePerson(person);
-                System.out.println("Xóa thành công");
+            while (true){
+                try {
+                    int choice = Integer.parseInt(scanner.nextLine());
+                    if (choice == 1) {
+                        studentsRepository.removePerson(person);
+                        System.out.println("Xóa thành công");
+                }
+            }catch (NumberFormatException numberFormatException){
+                    System.out.println("Vui lòng nhập số");
+                }
+
             }
         }
     }

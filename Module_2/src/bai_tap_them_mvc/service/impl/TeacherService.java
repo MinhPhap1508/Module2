@@ -26,7 +26,7 @@ public class TeacherService implements ImanageService {
     public void addPerson() {
         System.out.println("Nhập mã Giảng viên");
         String code = scanner.nextLine();
-        System.out.println("Nhap tên Giảng viên");
+        System.out.println("Nhập tên Giảng viên");
         String name = scanner.nextLine();
         System.out.println("Nhập ngày sinh");
         String date = scanner.nextLine();
@@ -55,11 +55,19 @@ public class TeacherService implements ImanageService {
             System.out.println("Bạn có chắc muốn xóa giảng viên này không");
             System.out.println("1. Yes");
             System.out.println("2. No");
-            int choice = Integer.parseInt(scanner.nextLine());
-            if (choice == 1) {
-                teacherRepository.removePerson(person);
-                System.out.println("Xóa thành công");
+            while (true){
+                try {
+                    int choice = Integer.parseInt(scanner.nextLine());
+                    if (choice == 1) {
+                        teacherRepository.removePerson(person);
+                        System.out.println("Xóa thành công");
+                        break;
+                    }
+                }catch (NumberFormatException numberFormatException){
+                    System.out.println("Vui lòng nhập số");
+                }
             }
+
         }
     }
 }
