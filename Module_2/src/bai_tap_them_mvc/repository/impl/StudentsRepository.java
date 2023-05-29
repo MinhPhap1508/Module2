@@ -14,23 +14,25 @@ public class StudentsRepository implements IRepository {
     static {
         students.add(new Students("C01", "Tran Minh Phap", "20/12/1012", true, "C0323G1", 10));
         students.add(new Students("C02", "Tran", "26/04/2001", false, "C0323G1", 100));
-        ReadAndWrite.writeToFileStudent(students,"student.csv");
     }
 
 
     @Override
     public List<Person> getAll() {
+        students = ReadAndWrite.readToFileStudent("src/bai_tap_them_mvc/controller/student.csv");
         return students;
     }
 
     @Override
     public void addPerson(Person person) {
+        students=ReadAndWrite.readToFileStudent("src/bai_tap_them_mvc/controller/student.csv");
         students.add(person);
-        ReadAndWrite.writeToFileStudent(students,"student.csv");
+        ReadAndWrite.writeToFileStudent(students,"src/bai_tap_them_mvc/controller/student.csv");
     }
 
     @Override
     public Person getByCode(String code) {
+        students = ReadAndWrite.readToFileStudent("src/bai_tap_them_mvc/controller/student.csv");
         for (Person person : students) {
             if (person.getCode().equals(code)) {
                 return person;
@@ -41,7 +43,8 @@ public class StudentsRepository implements IRepository {
 
     @Override
     public void removePerson(Person person) {
+        students = ReadAndWrite.readToFileStudent("src/bai_tap_them_mvc/controller/student.csv");
         students.remove(person);
-        ReadAndWrite.writeToFileStudent(students,"student.csv");
+        ReadAndWrite.writeToFileStudent(students,"src/bai_tap_them_mvc/controller/student.csv");
     }
 }

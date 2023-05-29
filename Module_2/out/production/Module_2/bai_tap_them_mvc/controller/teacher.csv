@@ -1,2 +1,3 @@
-Teacher{Id='T01', Tên='Nguyễn Văn A', ngày sinh='12/12/1998', giới tính=true Chuyên môn='Best'}
-Teacher{Id='T02', Tên='Trần Văn B', ngày sinh='01/05/1992', giới tính=false Chuyên môn='Very Good'}
+T01,Nguyễn Văn A,12/12/1998,Nam,Best
+T02,Trần Văn B,01/05/1992,Nữ,Very Good
+12,trtw,1232,Nam,gôd

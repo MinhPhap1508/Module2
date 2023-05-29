@@ -14,7 +14,7 @@ public class ReadAndWriteTeacher {
             FileWriter fileWriter = new FileWriter(file);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             for (int i = 0; i < personList.size(); i++) {
-                bufferedWriter.write(personList.get(i).toString());
+                bufferedWriter.write(personList.get(i).getInfoToCSV());
                 bufferedWriter.newLine();
             }
             bufferedWriter.flush();
@@ -35,6 +35,7 @@ public class ReadAndWriteTeacher {
                 String[] teacherArr =line.split(",");
 //               public Teacher(String code, String name, String date, boolean gender, String specialize)
                 Person person = new Teacher(teacherArr[0],teacherArr[1],teacherArr[2],Boolean.parseBoolean(teacherArr[3]),teacherArr[4]);
+           personList.add(person);
             }
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);

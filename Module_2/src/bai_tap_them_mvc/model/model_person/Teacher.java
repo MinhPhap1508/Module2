@@ -28,4 +28,8 @@ public class Teacher extends Person {
                 " Chuyên môn='" + specialize + '\'' +
                 '}';
     }
+
+    public String getInfoToCSV() {
+        return super.getInfoToCSV() + "," + this.specialize;
+    }
 }

@@ -1,2 +1,4 @@
-Students{Id='C01', Tên='Tran Minh Phap', ngày sinh='20/12/1012', giới tính=true Lớp='C0323G1', Điểm số=10}
-Students{Id='C02', Tên='Tran', ngày sinh='26/04/2001', giới tính=false Lớp='C0323G1', Điểm số=100}
+12,12,12,Nữ,1e1,123
+C02,Nguyễn Văn Thắng,12/12/2012,Nữ,C0323G1,100
+12,1,1,Nữ,1,1
+e2,12,12,Nữ,1,1

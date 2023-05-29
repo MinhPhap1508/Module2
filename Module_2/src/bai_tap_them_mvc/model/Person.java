@@ -58,6 +58,10 @@ public class Person {
                         ", ngày sinh='" + date + '\'' +
                         ", giới tính=" + gender;
     }
+
+    public String getInfoToCSV() {
+        return this.code + "," + this.name + "," + this.date + "," +(this.gender?"Nam":"Nữ");
+    }
 }
 
 

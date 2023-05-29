@@ -58,6 +58,7 @@ public class ManageController {
                         }
 
                     }
+                    break;
                 case 2:
                     while (true) {
                         System.out.println("1. Sinh Viên");
@@ -76,7 +77,7 @@ public class ManageController {
                         } catch (NumberFormatException numberFormatException) {
                             System.out.println("Vui lòng nhập số");
                         }
-                    }
+                    }break;
 
 
                 case 3:
@@ -88,14 +89,16 @@ public class ManageController {
                             switch (choice1) {
                                 case 1:
                                     studentService.getAll();
+                                    break;
                                 case 2:
                                     teacherService.getAll();
+                                    break;
                             }
                             break;
                         } catch (NumberFormatException numberFormatException) {
                             System.out.println("Vui lòng nhập số");
                         }
-                    }
+                    }break;
             }
         } while (true);
     }

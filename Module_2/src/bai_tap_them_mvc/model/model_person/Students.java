@@ -39,4 +39,8 @@ public class Students extends Person {
                 ", Điểm số=" + scores +
                 '}';
     }
+
+    public String getInfoToCSV() {
+        return super.getInfoToCSV() + "," + this.classes + "," + this.scores;
+    }
 }

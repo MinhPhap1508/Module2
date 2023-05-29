@@ -13,7 +13,7 @@ public class StudentService implements ImanageService {
     private static Scanner scanner = new Scanner(System.in);
 
     private static IRepository studentsRepository = new StudentsRepository();
-    boolean flag = true;
+    private boolean flag = true;
 
     @Override
     public void getAll() {
@@ -49,9 +49,9 @@ public class StudentService implements ImanageService {
             } catch (NumberFormatException numberFormatException) {
                 System.out.println("Vui lòng nhập lại");
             }
-            Students students = new Students(code, name, date, flag, classes, scores);
-            studentsRepository.addPerson(students);
         }
+        Students students = new Students(code, name, date, flag, classes, scores);
+        studentsRepository.addPerson(students);
         System.out.println("Thêm mới thành công");
     }
 
@@ -73,8 +73,13 @@ public class StudentService implements ImanageService {
                     if (choice == 1) {
                         studentsRepository.removePerson(person);
                         System.out.println("Xóa thành công");
-                }
-            }catch (NumberFormatException numberFormatException){
+                        break;
+                }else if (choice==2) {
+                        break;
+                    }else {
+                        throw new CheckEx("Vui lòng chọn 1 hoặc 2");
+                    }
+            }catch (NumberFormatException | CheckEx numberFormatException){
                     System.out.println("Vui lòng nhập số");
                 }
 
