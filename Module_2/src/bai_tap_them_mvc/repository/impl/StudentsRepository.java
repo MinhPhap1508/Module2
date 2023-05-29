@@ -14,7 +14,9 @@ public class StudentsRepository implements IRepository {
     static {
         students.add(new Students("C01", "Tran Minh Phap", "20/12/1012", true, "C0323G1", 10));
         students.add(new Students("C02", "Tran", "26/04/2001", false, "C0323G1", 100));
+        ReadAndWrite.writeToFileStudent(students,"student.csv");
     }
+
 
     @Override
     public List<Person> getAll() {
@@ -24,6 +26,7 @@ public class StudentsRepository implements IRepository {
     @Override
     public void addPerson(Person person) {
         students.add(person);
+        ReadAndWrite.writeToFileStudent(students,"student.csv");
     }
 
     @Override
@@ -39,5 +42,6 @@ public class StudentsRepository implements IRepository {
     @Override
     public void removePerson(Person person) {
         students.remove(person);
+        ReadAndWrite.writeToFileStudent(students,"student.csv");
     }
 }

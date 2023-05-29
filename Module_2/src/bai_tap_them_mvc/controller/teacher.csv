@@ -1,0 +1,2 @@
+Teacher{Id='T01', Tên='Nguyễn Văn A', ngày sinh='12/12/1998', giới tính=true Chuyên môn='Best'}
+Teacher{Id='T02', Tên='Trần Văn B', ngày sinh='01/05/1992', giới tính=false Chuyên môn='Very Good'}

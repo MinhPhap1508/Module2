@@ -1,14 +1,14 @@
 package bai_tap_them_mvc.controller;
 
 import bai_tap_them_mvc.model.Person;
-import bai_tap_them_mvc.model.model_person.Students;
+import bai_tap_them_mvc.model.model_person.Teacher;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ReadAndWrite {
-    public static void writeToFileStudent(List<Person>personList, String path){
+public class ReadAndWriteTeacher {
+    public static void writeToFileTeacher(List<Person> personList, String path){
         File file = new File(path);
         try {
             FileWriter fileWriter = new FileWriter(file);
@@ -24,7 +24,7 @@ public class ReadAndWrite {
             throw new RuntimeException(e);
         }
     }
-    public static List<Person> readToFileStudent(String path){
+    public static List<Person> readToFileTeacher(String path){
         List<Person> personList = new ArrayList<>();
         File file = new File(path);
         try {
@@ -32,9 +32,9 @@ public class ReadAndWrite {
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String line=null;
             while ((line = bufferedReader.readLine())!=null){
-                String[] personArr =line.split(",");
-//                public Students(String code, String name, String date, boolean gender, String classes, int scores)
-                Person person = new Students(personArr[0],personArr[1],personArr[2],Boolean.parseBoolean(personArr[3]),personArr[4],Integer.parseInt(personArr[5]));
+                String[] teacherArr =line.split(",");
+//               public Teacher(String code, String name, String date, boolean gender, String specialize)
+                Person person = new Teacher(teacherArr[0],teacherArr[1],teacherArr[2],Boolean.parseBoolean(teacherArr[3]),teacherArr[4]);
             }
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
