@@ -13,7 +13,7 @@ public class StudentsRepository implements IRepository {
    
     static {
         students.add(new Students("C01", "Tran Minh Phap", "20/12/1012", true, "C0323G1", 10));
-        students.add(new Students("C02", "Tran", "26/04/2001", false, "C0323G1", 100));
+        students.add(new Students("C02", "Lâm", "26/04/2001", false, "C0323G1", 100));
     }
 
 
