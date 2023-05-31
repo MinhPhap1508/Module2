@@ -1,6 +1,6 @@
 package bai_tap_them_mvc.repository.impl;
 
-import bai_tap_them_mvc.controller.ReadAndWrite;
+import bai_tap_them_mvc.common.ReadAndWrite;
 import bai_tap_them_mvc.model.Person;
 import bai_tap_them_mvc.model.model_person.Students;
 import bai_tap_them_mvc.repository.IRepository;

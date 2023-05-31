@@ -1,4 +1,4 @@
-package bai_tap_them_mvc.controller;
+package bai_tap_them_mvc.common;
 
 import bai_tap_them_mvc.model.Person;
 import bai_tap_them_mvc.model.model_person.Teacher;

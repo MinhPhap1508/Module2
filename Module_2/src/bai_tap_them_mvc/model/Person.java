@@ -1,5 +1,7 @@
 package bai_tap_them_mvc.model;
 
+import java.util.Objects;
+
 public class Person {
     private String code;
     private String name;
@@ -16,6 +18,19 @@ public class Person {
         this.name = name;
         this.date = date;
         this.gender = gender;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return code.equals(person.code);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(code);
     }
 
     public String getCode() {
