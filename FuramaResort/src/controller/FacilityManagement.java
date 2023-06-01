@@ -10,7 +10,8 @@ public class FacilityManagement {
             System.out.println("1. Display list facility");
             System.out.println("2. Add new facility");
             System.out.println("3. Display list facility maintenance");
-            System.out.println("4. Return main menu");
+            System.out.println("4. Delete list facility maintenance");
+            System.out.println("5. Return main menu");
             System.out.println("Select functions");
             int choice;
             while (true) {

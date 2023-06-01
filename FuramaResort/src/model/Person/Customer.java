@@ -7,7 +7,7 @@ private String address;
     public Customer() {
     }
 
-    public Customer(String code, String name, String date, String gender, int idCard, int numberPhone, String email, String customerSegment, String address) {
+    public Customer(String code, String name, String date, String gender, String idCard, String numberPhone, String email, String customerSegment, String address) {
         super(code, name, date, gender, idCard, numberPhone, email);
         this.customerSegment = customerSegment;
         this.address = address;

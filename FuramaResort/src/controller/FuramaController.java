@@ -1,6 +1,5 @@
 package controller;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 public class FuramaController {
@@ -28,7 +27,7 @@ public class FuramaController {
 
                 switch (choice) {
                     case 1:
-                        Employees.displayMenu();
+                        EmployeesManagement.displayMenu();
                         break;
                     case 2:
                         CustomerManagement.displayMenu();
