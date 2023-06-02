@@ -10,6 +10,10 @@ public class Regex {
         return id.matches("^NV-\\d{4}$");
     }
 
+    public static boolean checkCustomer(String id) {
+        return id.matches("^KH-\\d{4}$");
+    }
+
     public static boolean checkName(String name) {
         return name.matches("\\b[A-Z][a-z]*( [A-Z][a-z]*)*\\b");
     }
@@ -40,5 +44,9 @@ public class Regex {
 
     public static boolean checkDate(String date) {
         return date.matches("^\\d{2}(/)\\d{2}(/)\\d{4}$");
+    }
+
+    public static boolean checkSegments(String segments) {
+        return segments.matches("^(Diamond)|(Platinum)|(Gold)|(Silver)|(Member)$");
     }
 }

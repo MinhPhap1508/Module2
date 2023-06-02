@@ -12,9 +12,10 @@ public interface IEmployeeRepository {
 
     Employee getById(String id);
 
-    void editEmployee(Employee employee);
+    void editEmployee();
+    void updateEmployee();
 
     void removeEmployed(Employee employee);
 
-    List<Employee> searchEmployee(String name);
+    void searchEmployee(String name);
 }

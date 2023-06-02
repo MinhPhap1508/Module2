@@ -1,8 +1,12 @@
 package controller;
 
+import service.ICustomerService;
+import service.impl.CustomerService;
+
 import java.util.Scanner;
 
 public class CustomerManagement {
+    private static ICustomerService customerService= new CustomerService();
     public static void displayMenu() {
         Scanner scanner = new Scanner(System.in);
         do {
@@ -24,14 +28,24 @@ public class CustomerManagement {
             }
             switch (choice) {
                 case 1:
+                    customerService.displayAll();
                     break;
                 case 2:
+                    customerService.addCustomer();
                     break;
                 case 3:
+                    customerService.editCustomer();
                     break;
                 case 4:
-                    FuramaController.displayMainMenu();
+                    customerService.deleteCustomer();
                     break;
+                case 5:
+                    customerService.searchCustomer();
+                    break;
+                case 6:
+                    return;
+                default:
+                    System.out.println("Vui lòng chọn chức năng từ 1 đến 6");
             }
         } while (true);
 

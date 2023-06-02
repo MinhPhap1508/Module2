@@ -42,7 +42,7 @@ public class FuramaController {
                         PromotionManagement.displayMenu();
                         break;
                     case 6:
-                        System.out.println("Exit");
+                        System.out.println("Chào tạm biệt mọi người");
                         System.exit(1);
                     default:
                         System.out.println("Nhập lại lựa chọn từ 1 đến 6");

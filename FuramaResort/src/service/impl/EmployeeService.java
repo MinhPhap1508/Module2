@@ -7,10 +7,10 @@ import repository.impl.EmployeeRepository;
 import service.IEmployeeService;
 import utils.Regex;
 
-import java.time.DateTimeException;
+
 import java.time.LocalDate;
 import java.time.Period;
-import java.time.temporal.ChronoUnit;
+
 import java.util.List;
 import java.util.Scanner;
 
@@ -178,16 +178,24 @@ public class EmployeeService implements IEmployeeService {
                     checkEmployee.setNumberPhone(numPhone);
                     break;
                 case 6:
+                    String email;
+                    do {
+                        System.out.println("Nhập email");
+                        email = scanner.nextLine();
+                    } while (!Regex.checkEmail(email));
+                    checkEmployee.setEmail(email);
+                    break;
+                case 7:
                     System.out.println("Nhập trình độ");
                     String level = scanner.nextLine();
                     checkEmployee.setLevel(level);
                     break;
-                case 7:
+                case 8:
                     System.out.println("Nhập chức vụ");
                     String position = scanner.nextLine();
                     checkEmployee.setPosition(position);
                     break;
-                case 8:
+                case 9:
                     System.out.println("Nhập mức lương");
                     float salary;
                     while (true) {
@@ -199,9 +207,12 @@ public class EmployeeService implements IEmployeeService {
                         }
                     }
                     checkEmployee.setSalary(salary);
-                    System.out.println("Chỉnh sửa thành công");
+
             }
+            System.out.println("Chỉnh sửa thành công");
         }
+        employeeRepository.editEmployee();
+
     }
 
     @Override
@@ -233,6 +244,8 @@ public class EmployeeService implements IEmployeeService {
 
     @Override
     public void searchEmployee() {
-
+        System.out.println("Nhập tên nhân viên cần tìm kếm");
+        String name = scanner.nextLine();
+        employeeRepository.searchEmployee(name);
     }
 }

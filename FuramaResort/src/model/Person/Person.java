@@ -95,14 +95,12 @@ private String email;
 
     @Override
     public String toString() {
-        return "Person{" +
-                "code='" + code + '\'' +
+        return "code='" + code + '\'' +
                 ", name='" + name + '\'' +
                 ", date='" + date + '\'' +
                 ", gender='" + gender + '\'' +
                 ", idCard=" + idCard +
                 ", numberPhone=" + numberPhone +
-                ", email='" + email + '\'' +
-                '}';
+                ", email='" + email;
     }
 }

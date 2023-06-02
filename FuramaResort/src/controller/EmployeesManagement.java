@@ -45,7 +45,7 @@ public class EmployeesManagement {
                         employeeService.searchEmployee();
                         break;
                     case 6:
-                        FuramaController.displayMainMenu();
+                        return;
                     default:
                         System.out.println("Vui lòng chọn 1 trong 4 chức năng");
 

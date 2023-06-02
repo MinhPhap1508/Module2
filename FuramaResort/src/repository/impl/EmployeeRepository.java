@@ -45,11 +45,17 @@ public class EmployeeRepository implements IEmployeeRepository {
     }
 
     @Override
-    public void editEmployee(Employee employee) {
-//        List<String> list = ReadAndWrite.readFile(PATH_EMPLOYEE);
-//        for (int i = 0; i < list.size(); i++) {
-//            if(list.get(i).)
-//        }
+    public void updateEmployee() {
+        employeeList = getAll();
+    }
+
+    @Override
+    public void editEmployee() {
+        List<String> stringList = new ArrayList<>();
+        for (Employee str : employeeList) {
+            stringList.add(str.getCode() + "," + str.getName() + "," + str.getDate() + "," + str.getGender() + "," + str.getIdCard() + "," + str.getNumberPhone() + "," + str.getEmail() + "," + str.getLevel() + "," + str.getPosition() + "," + str.getSalary());
+        }
+        ReadAndWrite.writeFile(stringList, PATH_EMPLOYEE, false);
     }
 
     @Override
@@ -64,13 +70,12 @@ public class EmployeeRepository implements IEmployeeRepository {
     }
 
     @Override
-    public List<Employee> searchEmployee(String name) {
-//        List<Employee> employees = ReadAndWrite.readFile(PATH_EMPLOYEE);
-//        for (Employee e : employees) {
-//            if (e.getName().equals(name)) {
-//                employeeList.add(e);
-//            }
-//        }
-        return employeeList;
+    public void searchEmployee(String name) {
+        employeeList = getAll();
+        for (Employee e : employeeList) {
+            if (e.getName().contains(name)) {
+                System.out.println(e);
+            }
+        }
     }
 }
