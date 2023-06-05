@@ -1,6 +1,4 @@
-package model.Facility;
-
-import model.Facility.Facility;
+package model.facility;
 
 public class House extends Facility {
     private String roomStandard;
@@ -33,9 +31,9 @@ public class House extends Facility {
 
     @Override
     public String toString() {
-        return "House{" +
-                "roomStandard='" + roomStandard + '\'' +
-                ", floors=" + floors +
-                '}';
+        return "House, " +
+                super.toString() +
+                ", loại phòng:'" + roomStandard + '\'' +
+                ", Số tầng:" + floors;
     }
 }

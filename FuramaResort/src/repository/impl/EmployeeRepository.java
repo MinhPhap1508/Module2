@@ -1,7 +1,6 @@
 package repository.impl;
 
-import model.Person.Employee;
-import model.Person.Person;
+import model.person.Employee;
 import repository.IEmployeeRepository;
 import common.ReadAndWrite;
 

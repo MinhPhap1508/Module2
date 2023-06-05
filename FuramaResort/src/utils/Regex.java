@@ -49,4 +49,13 @@ public class Regex {
     public static boolean checkSegments(String segments) {
         return segments.matches("^(Diamond)|(Platinum)|(Gold)|(Silver)|(Member)$");
     }
+    public static boolean checkIdService(String idService){
+        return idService.matches("^SV((VL)|(HO)|(RO))(-)\\d{4}$");
+    }
+    public static boolean checkNameService(String name){
+        return name.matches("^[A-Z][a-z]*$");
+    }
+    public static boolean checkRental(String rental){
+        return rental.matches("^(Năm)|(Tháng)|(Ngày)|(Giờ)$");
+    }
 }

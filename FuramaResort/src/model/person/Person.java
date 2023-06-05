@@ -1,4 +1,4 @@
-package model.Person;
+package model.person;
 
 import java.util.Objects;
 
@@ -95,12 +95,12 @@ private String email;
 
     @Override
     public String toString() {
-        return "code='" + code + '\'' +
-                ", name='" + name + '\'' +
-                ", date='" + date + '\'' +
-                ", gender='" + gender + '\'' +
-                ", idCard=" + idCard +
-                ", numberPhone=" + numberPhone +
+        return "'id='" + code + '\'' +
+                ", Tên='" + name + '\'' +
+                ", ngày sinh='" + date + '\'' +
+                ", giới tính='" + gender + '\'' +
+                ", Số CMND=" + idCard +
+                ", số điện thoại=" + numberPhone +
                 ", email='" + email;
     }
 }

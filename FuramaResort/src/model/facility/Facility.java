@@ -1,4 +1,4 @@
-package model.Facility;
+package model.facility;
 
 import java.util.Objects;
 
@@ -85,13 +85,12 @@ public abstract class Facility {
 
     @Override
     public String toString() {
-        return "Facility{" +
-                "serviceCode='" + serviceCode + '\'' +
-                ", serviceName='" + serviceName + '\'' +
-                ", usableArea=" + usableArea +
-                ", price=" + price +
-                ", quantityMax=" + capacity +
-                ", rentalType='" + rentalType + '\'' +
-                '}';
+        return "Cơ sở vật chất:" +
+                "Id:'" + serviceCode + '\'' +
+                ", Tên dịch vụ:'" + serviceName + '\'' +
+                ", diện tích sử dụng:" + usableArea +
+                ", giá:" + price +
+                ", sức chứa tối đa:" + capacity +
+                ", hình thức thuê:'" + rentalType;
     }
 }

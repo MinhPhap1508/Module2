@@ -1,7 +1,7 @@
 package service.impl;
 
 import controller.CustomerManagement;
-import model.Person.Customer;
+import model.person.Customer;
 import repository.ICustomerRepository;
 import repository.impl.CustomerRepository;
 import service.ICustomerService;

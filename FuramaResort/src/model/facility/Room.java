@@ -1,6 +1,4 @@
-package model.Facility;
-
-import model.Facility.Facility;
+package model.facility;
 
 public class Room extends Facility {
     private String serviceFree;
@@ -23,8 +21,8 @@ public class Room extends Facility {
 
     @Override
     public String toString() {
-        return "Room{" +
-                "serviceFree='" + serviceFree + '\'' +
-                '}';
+        return "Room, " +
+                super.toString()+
+                ", dịch vụ khuyến mãi:'" + serviceFree ;
     }
 }

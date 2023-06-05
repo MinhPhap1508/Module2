@@ -1,7 +1,7 @@
 package service.impl;
 
 import controller.EmployeesManagement;
-import model.Person.Employee;
+import model.person.Employee;
 import repository.IEmployeeRepository;
 import repository.impl.EmployeeRepository;
 import service.IEmployeeService;
@@ -31,7 +31,7 @@ public class EmployeeService implements IEmployeeService {
 //         public Employee(String code, String name, String date, String gender, int idCard, int numberPhone, String email, String level, String position, float salary)
         String code;
         do {
-            System.out.println("Nhập mã nhân viên");
+            System.out.println("Nhập mã nhân viên theo định dạng NV-YYYY");
             code = scanner.nextLine();
         } while (!Regex.checkId(code));
         String name;
@@ -72,7 +72,7 @@ public class EmployeeService implements IEmployeeService {
 
         String idCard;
         do {
-            System.out.println("Nhập số CMND nhân viên");
+            System.out.println("Nhập số CMND nhân viên (9 số hoặc 12 số)");
             idCard = scanner.nextLine();
         } while (!Regex.checkIdCard(idCard));
 

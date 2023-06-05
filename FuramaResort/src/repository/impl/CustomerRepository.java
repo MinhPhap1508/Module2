@@ -1,8 +1,7 @@
 package repository.impl;
 
 import common.ReadAndWrite;
-import model.Person.Customer;
-import model.Person.Employee;
+import model.person.Customer;
 import repository.ICustomerRepository;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package model.Person;
+package model.person;
 
 public class Employee extends Person{
     private String level;
@@ -41,11 +41,11 @@ public class Employee extends Person{
 
     @Override
     public String toString() {
-        return "Employee{" +
+        return "-Nhân viên:" +
                 super.toString()+
-                "level='" + level + '\'' +
-                ", position='" + position + '\'' +
-                ", salary=" + salary +
-                '}';
+                ", trình độ='" + level + '\'' +
+                ", chức vụ='" + position + '\'' +
+                ", Mức lương=" + salary +
+                'đ';
     }
 }

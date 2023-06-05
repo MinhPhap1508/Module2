@@ -10,13 +10,13 @@ public class CustomerManagement {
     public static void displayMenu() {
         Scanner scanner = new Scanner(System.in);
         do {
-            System.out.println("Select Functions");
-            System.out.println("1. Display list customers");
-            System.out.println("2. Add new customer");
-            System.out.println("3. Edit customer");
-            System.out.println("4. Delete customer");
-            System.out.println("5. Search by name customer");
-            System.out.println("6. Return main menu");
+            System.out.println("1. Hiển thị danh sách khách hàng");
+            System.out.println("2. Thêm mới khách hàng");
+            System.out.println("3. Sửa thông tin khách hàng");
+            System.out.println("4. Xóa khách hàng");
+            System.out.println("5. Tìm kiếm tên khách hàng");
+            System.out.println("6. Trở lại menu chính");
+            System.out.println("Chọn chức năng:");
             int choice;
             while (true) {
                 try {

@@ -1,6 +1,4 @@
-package model.Facility;
-
-import model.Facility.House;
+package model.facility;
 
 public class Villa extends House {
     private float poolArea;
@@ -23,8 +21,8 @@ public class Villa extends House {
 
     @Override
     public String toString() {
-        return "Villa{" +
-                "poolArea=" + poolArea +
-                '}';
+        return "-Villa, " +
+                super.toString()+
+                ", diện tích hồ bơi: " + poolArea;
     }
 }

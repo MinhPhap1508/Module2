@@ -8,13 +8,13 @@ public class FuramaController {
             Scanner scanner = new Scanner(System.in);
             System.out.println("-----------------------");
             System.out.println("FuramaResort");
-            System.out.println("1. Employee Management");
-            System.out.println("2. Customer Management");
-            System.out.println("3. Facility Management");
-            System.out.println("4. Booking Management");
-            System.out.println("5. Promotion Management");
-            System.out.println("6. Exit");
-            System.out.println("Select functions: ");
+            System.out.println("1. Quản lý nhân viên");
+            System.out.println("2. Quản lý khách hàng");
+            System.out.println("3. Quản lý cơ sở vật chất");
+            System.out.println("4. Quản lý Booking");
+            System.out.println("5. Dịch vụ khuyến mãi");
+            System.out.println("6. Thoát");
+            System.out.println("Chọn chức năng: ");
             int choice;
             while (true) {
                 try {

@@ -1,4 +1,4 @@
-package model.Person;
+package model.person;
 
 public class Customer extends Person{
 private String customerSegment;
@@ -31,10 +31,9 @@ private String address;
 
     @Override
     public String toString() {
-        return "Customer{" +
+        return "-Khách hàng:" +
                 super.toString()+
-                "customerSegment='" + customerSegment + '\'' +
-                ", address='" + address + '\'' +
-                '}';
+                ", phân khúc khách hàng='" + customerSegment + '\'' +
+                ", địa chỉ='" + address;
     }
 }
