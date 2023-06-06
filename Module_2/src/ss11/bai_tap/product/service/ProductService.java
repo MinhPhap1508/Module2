@@ -7,7 +7,7 @@ import ss11.bai_tap.product.repository.ProductRepository;
 import java.util.List;
 import java.util.Scanner;
 
-public class    ProductService implements IService {
+public class  ProductService implements IService {
     Scanner scanner = new Scanner(System.in);
     private static IProductRepository productRepository = new ProductRepository();
 

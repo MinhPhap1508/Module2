@@ -14,7 +14,7 @@ public class FacilityManagement {
             System.out.println("1. Hiển thị danh sách cơ sở vật chất");
             System.out.println("2. Thêm mới cơ sở vật chất");
             System.out.println("3. Hiển thị danh sách cơ sở vật chất đang bảo trì");
-            System.out.println("4. Xóa danh sách cơ sở vật chất đang bảo trì");
+            System.out.println("4. Xóa cơ sở vật chất");
             System.out.println("5. Trở lại menu chính");
             System.out.println("Chọn chức năng: ");
             int choice;
@@ -34,8 +34,10 @@ public class FacilityManagement {
                     facilityService.addFacility();
                     break;
                 case 3:
+                    facilityService.displayFacilityMaintain();
                     break;
                 case 4:
+                    facilityService.deleteFacility();
                     break;
                 case 5:
                     return;

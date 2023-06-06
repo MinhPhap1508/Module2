@@ -33,7 +33,17 @@ public class EmployeeService implements IEmployeeService {
         do {
             System.out.println("Nhập mã nhân viên theo định dạng NV-YYYY");
             code = scanner.nextLine();
-        } while (!Regex.checkId(code));
+            Employee employee = employeeRepository.getById(code);
+            if (employee != null) {
+                System.out.println("Mã nhân viên đã tồn tại");
+                continue;
+            }
+            if (!Regex.checkId(code)) {
+                continue;
+            }
+            break;
+
+        } while (true);
         String name;
         do {
             System.out.println("Nhập tên nhân viên");

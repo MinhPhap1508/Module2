@@ -6,7 +6,7 @@ import service.impl.CustomerService;
 import java.util.Scanner;
 
 public class CustomerManagement {
-    private static ICustomerService customerService= new CustomerService();
+    private static final ICustomerService customerService= new CustomerService();
     public static void displayMenu() {
         Scanner scanner = new Scanner(System.in);
         do {

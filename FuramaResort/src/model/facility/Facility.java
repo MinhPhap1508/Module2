@@ -85,10 +85,10 @@ public abstract class Facility {
 
     @Override
     public String toString() {
-        return "Cơ sở vật chất:" +
+        return "-|Cơ sở vật chất|" +
                 "Id:'" + serviceCode + '\'' +
                 ", Tên dịch vụ:'" + serviceName + '\'' +
-                ", diện tích sử dụng:" + usableArea +
+                ", diện tích sử dụng:" + usableArea+"m2" +
                 ", giá:" + price +
                 ", sức chứa tối đa:" + capacity +
                 ", hình thức thuê:'" + rentalType;

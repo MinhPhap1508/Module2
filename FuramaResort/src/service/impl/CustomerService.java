@@ -1,6 +1,7 @@
 package service.impl;
 
 import controller.CustomerManagement;
+import model.facility.Facility;
 import model.person.Customer;
 import repository.ICustomerRepository;
 import repository.impl.CustomerRepository;
@@ -14,7 +15,7 @@ import java.util.Scanner;
 
 public class CustomerService implements ICustomerService {
     private static Scanner scanner = new Scanner(System.in);
-    private static ICustomerRepository customerRepository = new CustomerRepository();
+    private static final ICustomerRepository customerRepository = new CustomerRepository();
 
     @Override
     public void displayAll() {
@@ -27,11 +28,22 @@ public class CustomerService implements ICustomerService {
     @Override
     public void addCustomer() {
 //        (String code, String name, String date, String gender, String idCard, String numberPhone, String email, String customerSegment, String address)
+
         String code;
         do {
             System.out.println("Nhập id khách hàng");
             code = scanner.nextLine();
-        } while (!Regex.checkCustomer(code));
+            Customer customer=customerRepository.getById(code);
+            if(customer != null){
+                System.out.println("Mã khách hàng đã tồn tại");
+                continue;
+            }
+            if(!Regex.checkCustomer(code)) {
+                System.out.println();
+                continue;
+            }
+            break;
+        } while (true);
         String name;
         do {
             System.out.println("Nhập tên khách hàng");

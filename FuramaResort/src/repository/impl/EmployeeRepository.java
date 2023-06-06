@@ -31,7 +31,6 @@ public class EmployeeRepository implements IEmployeeRepository {
         strings.add(employee.getCode() + "," + employee.getName() + "," + employee.getDate() + "," + employee.getGender() + "," + employee.getIdCard() + "," + employee.getNumberPhone() + "," + employee.getEmail() + "," + employee.getLevel() + "," + employee.getPosition() + "," + employee.getSalary());
         ReadAndWrite.writeFile(strings, PATH_EMPLOYEE, true);
     }
-
     @Override
     public Employee getById(String id) {
         employeeList = getAll();
