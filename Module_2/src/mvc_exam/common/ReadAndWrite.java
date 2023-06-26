@@ -1,29 +1,30 @@
 package mvc_exam.common;
 
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ReadAndWrite {
     public static List<String> readFile(String path) {
-        List<String> strings = new ArrayList<>();
+        List<String> stringList = new ArrayList<>();
         try {
             FileReader fileReader = new FileReader(path);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String line = "";
             while ((line = bufferedReader.readLine()) != null) {
-                strings.add(line);
+                stringList.add(line);
             }
             bufferedReader.close();
         } catch (FileNotFoundException e) {
-            System.out.println("File không tồn tại");
+            throw new RuntimeException(e);
         } catch (IOException e) {
-            System.out.println("Lỗi đọc file");
+            throw new RuntimeException(e);
         }
-        return strings;
+        return stringList;
     }
 
-    public static void writeFile(String path, List<String> strings, boolean append) {
+    public static void writeFile(List<String> strings, String path, boolean append) {
         try {
             FileWriter fileWriter = new FileWriter(path);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
@@ -33,7 +34,8 @@ public class ReadAndWrite {
             }
             bufferedWriter.close();
         } catch (IOException e) {
-            System.out.println("Lỗi đọc file");
+            throw new RuntimeException(e);
         }
+
     }
 }

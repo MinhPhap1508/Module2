@@ -152,7 +152,16 @@ public class FacilityService implements IFacilityService {
                     do {
                         System.out.println("Nhập mã dịch vụ theo định dạng SVHO-YYYY");
                         idService = scanner.nextLine();
-                    } while (!Regex.checkIdService(idService));
+                        Facility facility = facilityRepository.getById(idService);
+                        if (facility != null) {
+                            System.out.println("TRùng id");
+                            continue;
+                        }
+                        if (!Regex.checkIdService(idService)) {
+                            continue;
+                        }
+                        break;
+                    } while (true);
                     String nameService;
                     do {
                         System.out.println("Nhập tên dịch vụ (Vui lòng viết hoa chữ cái đầu tiên");
@@ -222,7 +231,16 @@ public class FacilityService implements IFacilityService {
                     do {
                         System.out.println("Nhập mã dịch vụ theo định dạng SVRO-YYYY");
                         idService = scanner.nextLine();
-                    } while (!Regex.checkIdService(idService));
+                        Facility facility = facilityRepository.getById(idService);
+                        if (facility != null) {
+                            System.out.println("Trùng id");
+                            continue;
+                        }
+                        if (!Regex.checkIdService(idService)) {
+                            continue;
+                        }
+                        break;
+                    } while (true);
                     do {
                         System.out.println("Nhập tên dịch vụ");
                         serviceName = scanner.nextLine();
